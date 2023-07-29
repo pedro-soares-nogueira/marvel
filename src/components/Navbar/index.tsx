@@ -1,5 +1,4 @@
 import {
-    BackgroundLogo,
     BuyMeaCoffee,
     CoffeeImage,
     LogoContainer,
@@ -7,13 +6,13 @@ import {
     MenuListWrapper,
     NavbarContainer,
 } from "./index.styles";
-import mainLogo from "../../assets/main_logo.svg";
+import mainLogo from "../../assets/geek-icon.svg";
 import buymeacofe from "../../assets/buymeacofe.png";
 
 export const Navbar = () => {
     return (
         <NavbarContainer>
-            <BackgroundLogo>teste</BackgroundLogo>
+            {/* <BackgroundLogo>teste</BackgroundLogo> */}
             <LogoContainer>
                 <img src={mainLogo} alt="" />
             </LogoContainer>

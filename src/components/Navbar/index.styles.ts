@@ -22,9 +22,13 @@ export const LogoContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: ${(props) => props.theme.black};
+    /* background-color: ${(props) => props.theme.black}; */
     padding: 1rem;
     color: ${(props) => props.theme.white};
+
+    img {
+        max-width: 6rem;
+    }
 
     &:hover {
         cursor: pointer;
