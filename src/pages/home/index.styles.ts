@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { Container } from "../../styles/globals";
+import { motion } from "framer-motion";
 
 export const HeroWrapper = styled.div`
     background-color: ${(props) => props.theme.black};
@@ -9,7 +10,8 @@ export const ContainerHeroWrapper = styled(Container)`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
+    gap: 2rem;
+    padding: 3rem 0;
 `;
 
 export const TextHeroContent = styled.div`
@@ -27,7 +29,7 @@ export const TextHeroContent = styled.div`
         font-size: 17px;
         font-style: normal;
         font-weight: 500;
-        line-height: normal;
+        line-height: 25px;
     }
 
     h2 {
@@ -68,6 +70,25 @@ export const Button = styled.button`
 `;
 
 export const CarouselHeroWrapper = styled.div`
-    flex: 1;
-    min-height: 45rem;
+    /* flex: 1; */
+    /* min-height: 45rem; */
+`;
+
+export const CarouselHeroImageWhapper = styled(motion.div)`
+    display: flex;
+    gap: 4px;
+`;
+
+export const CarouselImage = styled.img`
+    width: 12rem;
+    object-fit: none;
+    border-radius: 10px;
+    pointer-events: none;
+`;
+
+export const CarouselWrapper = styled(motion.div)`
+    cursor: grab;
+    overflow: hidden;
+    max-width: 474px;
+    width: 100%;
 `;
