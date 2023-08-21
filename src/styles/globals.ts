@@ -20,6 +20,6 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-    max-width: 1320px;
-    margin: auto;
+  max-width: 1320px;
+  margin: auto;
 `;
