@@ -36,6 +36,10 @@ export const LogoContainer = styled.div`
 `;
 
 export const MenuListWrapper = styled.div`
+    @media (max-width: ${(props) => props.theme.bp_medium}) {
+        display: none;
+    }
+
     width: 433px;
     height: 33px;
     justify-content: flex-start;
@@ -68,6 +72,10 @@ export const MenuList = styled.div<MenuListIsActive>`
 `;
 
 export const BuyMeaCoffee = styled.button`
+    @media (max-width: ${(props) => props.theme.bp_medium}) {
+        display: none;
+    }
+
     background-color: ${(props) => props.theme.yellow300};
     display: flex;
     align-items: center;
