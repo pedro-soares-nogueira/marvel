@@ -1,41 +1,14 @@
+import { Carousel } from "../../components/Carousel";
 import { Navbar } from "../../components/Navbar";
 import { Container } from "../../styles/globals";
 import {
   Button,
-  CarouselHeroImageWhapper,
-  CarouselHeroWrapper,
-  CarouselImage,
-  CarouselWrapper,
   ContainerHeroWrapper,
   HeroWrapper,
   TextHeroContent,
 } from "./index.styles";
-import { motion } from "framer-motion";
-
-import image01 from "../../assets/carousel/image1.png";
-import image02 from "../../assets/carousel/image2.png";
-import image03 from "../../assets/carousel/image3.png";
-import image04 from "../../assets/carousel/image4.png";
-import { RefObject, useEffect, useRef, useState } from "react";
-
-const images = [image01, image02, image03, image04];
 
 export const Home = () => {
-  const carousel: RefObject<HTMLDivElement> = useRef(null);
-
-  const [width, setWidth] = useState(0);
-
-  useEffect(() => {
-    const scrollWidth = carousel.current?.scrollWidth
-      ? carousel.current?.scrollWidth
-      : 0;
-    const offsetWidth = carousel.current?.offsetWidth
-      ? carousel.current?.offsetWidth
-      : 0;
-
-    setWidth(scrollWidth - offsetWidth);
-  }, []);
-
   return (
     <section>
       <Container>
@@ -69,21 +42,7 @@ export const Home = () => {
               </svg>
             </Button>
           </TextHeroContent>
-          <CarouselHeroWrapper>
-            {/* CAROUSEL */}
-            <CarouselWrapper ref={carousel} whileTap={{ cursor: "grabbing" }}>
-              <CarouselHeroImageWhapper
-                drag="x"
-                dragConstraints={{ right: 0, left: -width }}
-              >
-                {images.map((image) => (
-                  <motion.div key={image}>
-                    <CarouselImage src={image} alt="" />
-                  </motion.div>
-                ))}
-              </CarouselHeroImageWhapper>
-            </CarouselWrapper>
-          </CarouselHeroWrapper>
+          <Carousel />
         </ContainerHeroWrapper>
       </HeroWrapper>
     </section>
