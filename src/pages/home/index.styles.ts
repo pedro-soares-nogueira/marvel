@@ -15,7 +15,6 @@ export const ContainerHeroWrapper = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
   padding: 3rem 2rem;
 `;
 
@@ -25,7 +24,7 @@ export const TextHeroContent = styled.div`
   }
 
   padding: 2rem 0;
-  max-width: 45rem;
+  max-width: 35rem;
 
   display: flex;
   flex-direction: column;
