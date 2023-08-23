@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 import { Container } from "../../styles/globals";
 
 export const HeroWrapper = styled.div`
-  background-color: ${(props) => props.theme.black};
+  background-color: ${(props) => props.theme.red300};
 `;
 
 export const ContainerHeroWrapper = styled(Container)`
@@ -62,7 +62,7 @@ export const Button = styled.button`
 
   border-radius: 4px;
   border: none;
-  background: ${(props) => props.theme.red300};
+  background: ${(props) => props.theme.black};
 
   color: ${(props) => props.theme.white};
   font-family: Montserrat;

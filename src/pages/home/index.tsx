@@ -7,6 +7,7 @@ import {
   HeroWrapper,
   TextHeroContent,
 } from "./index.styles";
+import main_marvel_banner from "../../assets/main_marvel_banner.jpg";
 
 export const Home = () => {
   return (
@@ -42,7 +43,16 @@ export const Home = () => {
               </svg>
             </Button>
           </TextHeroContent>
-          <Carousel />
+          {/* <Carousel /> */}
+          <div>
+            <img
+              src={main_marvel_banner}
+              alt="main_marvel_banner"
+              style={{
+                width: "664px",
+              }}
+            />
+          </div>
         </ContainerHeroWrapper>
       </HeroWrapper>
     </section>
