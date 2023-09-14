@@ -13,10 +13,24 @@ import {
     SaleComicsHeaderButton,
     SaleComicsProducts,
 } from "./index.styles";
+import { useRef } from "react";
 
-const comics = [1, 2, 3, 4];
+const comics = [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+    22,
+];
 
 export const Home = () => {
+    const carousel = useRef<HTMLDivElement>(null);
+
+    const handleLeftClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+    };
+
+    const handleRightClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+    };
+
     return (
         <section style={{ margin: "0rem 0rem 10rem" }}>
             <Navbar />
@@ -28,15 +42,15 @@ export const Home = () => {
                             Comics for <strong>SALE</strong>
                         </span>
                         <div>
-                            <SaleComicsHeaderButton>
+                            <SaleComicsHeaderButton onClick={handleLeftClick}>
                                 <ArrowLeft size={22} />
                             </SaleComicsHeaderButton>
-                            <SaleComicsHeaderButton>
+                            <SaleComicsHeaderButton onClick={handleRightClick}>
                                 <ArrowRight size={22} />
                             </SaleComicsHeaderButton>
                         </div>
                     </SaleComicsHeader>
-                    <SaleComicsProducts>
+                    <SaleComicsProducts ref={carousel}>
                         {comics.map((item) => (
                             <ComicCard key={item}>
                                 <ComicCardHeader>

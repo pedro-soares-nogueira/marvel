@@ -37,6 +37,20 @@ export const SaleComicsProducts = styled.div`
     justify-content: space-between;
     gap: 3rem;
     margin: 2rem 0rem;
+
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    height: 35rem;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        width: 0.3em;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
 `;
 
 export const ComicCard = styled.div`
