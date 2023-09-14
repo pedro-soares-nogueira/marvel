@@ -16,7 +16,7 @@ export const SaleComicsHeader = styled.div`
 
     span {
         font-size: 24px;
-        background-color: #061169;
+        background-color: #162cdd;
         padding: 1rem 1.5rem;
         color: #fff;
     }
@@ -40,7 +40,7 @@ export const SaleComicsProducts = styled.div`
 
     overflow-x: auto;
     scroll-behavior: smooth;
-    height: 35rem;
+    height: 40rem;
 
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -55,7 +55,8 @@ export const SaleComicsProducts = styled.div`
 
 export const ComicCard = styled.div`
     width: 100%;
-    max-width: 100%;
+    max-width: 19rem;
+    flex: none;
     border: 1px solid #000;
 
     position: relative;
@@ -74,8 +75,9 @@ export const ComicImage = styled.img`
     width: 100%;
     background-color: #ccc;
     display: block;
-    height: 20rem;
+    height: 24rem;
     margin: 1rem 0rem 0rem;
+    object-fit: cover;
 `;
 
 export const ComicName = styled.span`
@@ -84,7 +86,11 @@ export const ComicName = styled.span`
     font-size: 20px;
     background-color: #000;
     color: #fff;
-    padding: 16px 0px 26px;
+    padding: 16px 12px 26px;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 `;
 
 export const ComicCardButton = styled(Button)`
