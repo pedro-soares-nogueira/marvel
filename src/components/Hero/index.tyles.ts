@@ -3,6 +3,7 @@ import { Container } from "../../styles/globals";
 
 export const HeroWrapper = styled.div`
     background-color: ${(props) => props.theme.red300};
+    border-bottom: 12px solid ${(props) => props.theme.yellow300};
 `;
 
 export const ContainerHeroWrapper = styled(Container)`
