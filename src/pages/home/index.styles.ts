@@ -36,7 +36,7 @@ export const SaleComicsProducts = styled.div`
     align-items: center;
     justify-content: space-between;
     gap: 3rem;
-    margin: 2rem 0rem;
+    margin: 0rem;
 
     overflow-x: auto;
     scroll-behavior: smooth;
