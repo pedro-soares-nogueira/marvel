@@ -2,14 +2,16 @@ import { Hero } from "../../sections/Hero";
 import { Navbar } from "../../components/Navbar";
 import { CarouselSection } from "../../sections/CarouselSection";
 import { Contact } from "../../sections/Contact";
+import { Footer } from "../../components/Footer";
 
 export const Home = () => {
   return (
-    <section style={{ margin: "0rem 0rem 3rem" }}>
+    <section>
       <Navbar />
       <Hero />
       <CarouselSection />
       <Contact />
+      <Footer />
     </section>
   );
 };
