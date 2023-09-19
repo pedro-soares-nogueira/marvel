@@ -43,18 +43,6 @@ export const Home = () => {
               </SaleComicsHeaderButton>
             </div>
           </SaleComicsHeader>
-          {/* <SaleComicsProducts ref={carousel}>
-            {comics.map((item) => {
-              const { id, dates, title, thumbnail } = item;
-
-              const parsedDate = new Date(dates[0].date);
-              const formattedDate = format(parsedDate, "dd/MM/yyyy");
-              console.log(thumbnail);
-              return (
-               
-              );
-            })}
-          </SaleComicsProducts> */}
           <Carousel />
         </SaleComics>
       </SaleComicsContainer>

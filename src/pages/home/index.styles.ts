@@ -9,7 +9,18 @@ export const SaleComicsContainer = styled(Container)`
 export const SaleComics = styled.div``;
 
 export const SaleComicsHeader = styled.div`
+  @media (max-width: ${(props) => props.theme.bp_small}) {
+    span {
+      margin: auto;
+    }
+
+    div {
+      margin: 1rem auto;
+    }
+  }
+
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
   align-items: center;

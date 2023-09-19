@@ -118,9 +118,9 @@ export const Carousel = () => {
   useEffect(() => {
     // responsive slider
     const handleResizeWindow = () => {
-      if (window.innerWidth < 420) {
+      if (window.innerWidth < 560) {
         setSlidesPerView(1);
-      } else if (window.innerWidth > 420 && window.innerWidth < 810) {
+      } else if (window.innerWidth > 560 && window.innerWidth < 810) {
         setSlidesPerView(2);
       } else if (window.innerWidth > 810 && window.innerWidth < 1014) {
         setSlidesPerView(3);

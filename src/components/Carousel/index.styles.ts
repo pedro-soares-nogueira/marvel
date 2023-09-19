@@ -10,7 +10,7 @@ export const ComicCard = styled.div`
   max-width: 15rem;
   flex: none;
   border: 1px solid #000;
-
+  margin: 0 auto;
   position: relative;
 `;
 

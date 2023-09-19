@@ -11,12 +11,13 @@ export const ContainerHeroWrapper = styled(Container)`
     flex-direction: column;
     text-align: center;
     margin: 0 2rem;
+    padding: 3rem 2rem;
   }
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3rem 0rem 2rem 2rem;
+  padding: 0rem;
 `;
 
 export const TextHeroContent = styled.div`
