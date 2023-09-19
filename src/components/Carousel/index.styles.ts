@@ -1,23 +1,58 @@
 import { styled } from "styled-components";
-import { motion } from "framer-motion";
+import { Button } from "../Hero/index.styles";
 
-export const CarouselHeroWrapper = styled.div``;
-
-export const CarouselHeroImageWhapper = styled(motion.div)`
-  display: flex;
-  gap: 4px;
+export const CarouselHeroWrapper = styled.div`
+  margin: 4rem 0rem;
 `;
 
-export const CarouselImage = styled.img`
-  width: 12rem;
-  object-fit: none;
-  border-radius: 10px;
-  pointer-events: none;
-`;
-
-export const CarouselWrapper = styled(motion.div)`
-  cursor: grab;
-  overflow: hidden;
-  max-width: 474px;
+export const ComicCard = styled.div`
   width: 100%;
+  max-width: 15rem;
+  flex: none;
+  border: 1px solid #000;
+
+  position: relative;
+`;
+
+export const ComicCardHeader = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 800;
+  margin: 14px;
+`;
+
+export const ComicImage = styled.img`
+  width: 100%;
+  background-color: #ccc;
+  display: block;
+  height: 15rem;
+  margin: 1rem 0rem 0rem;
+  object-fit: cover;
+`;
+
+export const ComicName = styled.span`
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  background-color: #000;
+  color: #fff;
+  padding: 16px 12px 26px;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+`;
+
+export const ComicCardButton = styled(Button)`
+  position: absolute;
+  bottom: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  color: #000;
+  text-transform: uppercase;
+  border: 1px solid #000;
+  border-radius: 0 !important;
 `;
