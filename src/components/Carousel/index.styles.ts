@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { Button } from "../Hero/index.styles";
+import { Button } from "../../sections/Hero/index.styles";
 
 export const CarouselHeroWrapper = styled.div`
   margin: 4rem 0rem;

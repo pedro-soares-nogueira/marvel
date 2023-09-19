@@ -24,6 +24,7 @@ const publicKey = "116c3ab0e15b79bb6c80e9681213a7b1";
 
 const timestemp = Number(new Date());
 const hash = md5(timestemp + privateKey + publicKey);
+
 interface IComics {
   id: number;
   digitalId: number;
@@ -113,8 +114,6 @@ export const Carousel = () => {
       .catch((error) => console.error(error));
   }, []);
 
-  // console.log(comics);
-
   useEffect(() => {
     // responsive slider
     const handleResizeWindow = () => {
@@ -149,7 +148,6 @@ export const Carousel = () => {
 
           const parsedDate = new Date(dates[0].date);
           const formattedDate = format(parsedDate, "dd/MM/yyyy");
-          console.log(thumbnail);
           return (
             <SwiperSlide>
               <ComicCard key={item.id}>
