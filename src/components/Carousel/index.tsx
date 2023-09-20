@@ -16,6 +16,9 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { format } from "date-fns";
 
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+
 register();
 
 const baseURL = "http://gateway.marvel.com/v1/public/comics";
@@ -113,6 +116,7 @@ export const Carousel = () => {
       .then((response) => setComics(response.data.data.results))
       .catch((error) => console.error(error));
   }, []);
+  console.log(comics);
 
   useEffect(() => {
     // responsive slider
@@ -139,35 +143,50 @@ export const Carousel = () => {
 
   return (
     <CarouselHeroWrapper>
-      <Swiper
-        style={{ height: "26rem" }}
-        slidesPerView={slidesPerView}
-        pagination={{ clickable: true }}
-        navigation={{ nextEl: ".arrow-left", prevEl: ".arrow-right" }}
-      >
-        {comics.map((item) => {
-          const { id, dates, title, thumbnail } = item;
+      {comics.length ? (
+        <Swiper
+          style={{ height: "26rem" }}
+          slidesPerView={slidesPerView}
+          pagination={{ clickable: true }}
+          navigation={{ nextEl: ".arrow-left", prevEl: ".arrow-right" }}
+        >
+          {comics.map((item) => {
+            const { id, dates, title, thumbnail } = item;
 
-          const parsedDate = new Date(dates[0].date);
-          const formattedDate = format(parsedDate, "dd/MM/yyyy");
-          return (
-            <SwiperSlide>
-              <ComicCard key={item.id}>
-                <ComicCardHeader>
-                  <span>{formattedDate}</span>
-                  <span>#{id}</span>
-                </ComicCardHeader>
-                <ComicImage
-                  src={`${thumbnail.path}/portrait_fantastic.${thumbnail.extension}`}
-                  alt="comics"
-                />
-                <ComicName>{title}</ComicName>
-                <ComicCardButton>More</ComicCardButton>
-              </ComicCard>
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+            const parsedDate = new Date(dates[0].date);
+            const formattedDate = format(parsedDate, "dd/MM/yyyy");
+            return (
+              <SwiperSlide>
+                <ComicCard key={item.id}>
+                  <ComicCardHeader>
+                    <span>{formattedDate}</span>
+                    <span>#{id}</span>
+                  </ComicCardHeader>
+                  <ComicImage
+                    src={`${thumbnail.path}/portrait_fantastic.${thumbnail.extension}`}
+                    alt="comics"
+                  />
+                  <ComicName>{title}</ComicName>
+                  <ComicCardButton>More</ComicCardButton>
+                </ComicCard>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      ) : (
+        <div
+          style={{
+            display: "flex",
+            gap: "20px",
+          }}
+        >
+          <Skeleton height={300} width={220} />
+          <Skeleton height={300} width={220} />
+          <Skeleton height={300} width={220} />
+          <Skeleton height={300} width={220} />
+          <Skeleton height={300} width={220} />
+        </div>
+      )}
     </CarouselHeroWrapper>
   );
 };
