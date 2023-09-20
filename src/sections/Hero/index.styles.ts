@@ -25,7 +25,7 @@ export const TextHeroContent = styled.div`
     align-items: center;
   }
 
-  padding: 2rem 0;
+  padding: 2rem;
   max-width: 35rem;
 
   display: flex;

@@ -123,7 +123,9 @@ export const Carousel = () => {
         setSlidesPerView(2);
       } else if (window.innerWidth > 810 && window.innerWidth < 1014) {
         setSlidesPerView(3);
-      } else if (window.innerWidth > 1014) {
+      } else if (window.innerWidth > 1014 && window.innerWidth < 1200) {
+        setSlidesPerView(4);
+      } else if (window.innerWidth > 1200) {
         setSlidesPerView(5);
       }
     };
