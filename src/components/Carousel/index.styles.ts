@@ -36,7 +36,7 @@ export const ComicName = styled.span`
   display: block;
   text-align: center;
   font-size: 20px;
-  background-color: #000;
+  background-color: ${(props) => props.theme.black};
   color: #fff;
   padding: 16px 12px 26px;
 
@@ -50,9 +50,9 @@ export const ComicCardButton = styled(Button)`
   bottom: -5%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #fff;
-  color: #000;
+  background-color: ${(props) => props.theme.white};
+  color: ${(props) => props.theme.black};
   text-transform: uppercase;
-  border: 1px solid #000;
+  border: 1px solid ${(props) => props.theme.black};
   border-radius: 0 !important;
 `;

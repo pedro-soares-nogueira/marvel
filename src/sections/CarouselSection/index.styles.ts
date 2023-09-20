@@ -27,7 +27,7 @@ export const SaleComicsHeader = styled.div`
 
   span {
     font-size: 24px;
-    background-color: #162cdd;
+    background-color: ${(props) => props.theme.blue300};
     padding: 1rem 1.5rem;
     color: #fff;
   }
