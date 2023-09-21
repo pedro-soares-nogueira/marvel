@@ -178,9 +178,10 @@ export const Carousel = () => {
           style={{
             display: "flex",
             gap: "20px",
+            justifyContent: "center",
+            overflow: "hidden",
           }}
         >
-          <Skeleton height={300} width={220} />
           <Skeleton height={300} width={220} />
           <Skeleton height={300} width={220} />
           <Skeleton height={300} width={220} />
