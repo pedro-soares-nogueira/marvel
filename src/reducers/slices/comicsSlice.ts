@@ -86,6 +86,15 @@ export const getAllComics = createAsyncThunk(
     return data;
   }
 );
+
+export const getAllCharacteres = createAsyncThunk(
+  "comics/getAllCharacters",
+  async () => {
+    const data = await getComics();
+    return data;
+  }
+);
+
 export interface Comics {
   comics: IComic[] | null | undefined;
   isLoading: boolean;

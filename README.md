@@ -2,9 +2,11 @@
 
 ## Todo
 
+- [] Refactor comic fetch
+
 ## Features
 
--   [] Theme (light - dark)
--   [] Search on navbar
--   [] Onboarding Guide
--   [] Testes unitários
+- [] Theme (light - dark)
+- [] Search on navbar
+- [] Onboarding Guide
+- [] Testes unitários

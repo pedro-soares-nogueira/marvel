@@ -13,11 +13,12 @@ export const getComics = async () => {
     const response = await axios.get(
       `${baseURL}?ts=${timestemp}&apikey=${publicKey}&hash=${hash}`
     );
+    console.log(response);
 
     return response.data.results;
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
-
-  return;
 };
+
+export const getCharacters = async () => {};
