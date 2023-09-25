@@ -2,5 +2,9 @@
 
 ## Todo
 
-- [ ] redux-toolkit
-- [ ] footer
+## Features
+
+-   [] Theme (light - dark)
+-   [] Search on navbar
+-   [] Onboarding Guide
+-   [] Testes unitários
