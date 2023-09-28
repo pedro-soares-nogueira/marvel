@@ -89,10 +89,7 @@ export const getAllComics = createAsyncThunk(
 
 export const getAllCharacteres = createAsyncThunk(
   "comics/getAllCharacters",
-  async () => {
-    const data = await getComics();
-    return data;
-  }
+  async () => {}
 );
 
 export interface Comics {
@@ -112,10 +109,10 @@ export const comicsSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers(builder) {
-    builder.addCase(getAllComics.fulfilled, (state) => {
+    builder.addCase(getAllComics.pending, (state) => {
       state.isLoading = true;
     });
-    builder.addCase(getAllComics.pending, (state, action) => {
+    builder.addCase(getAllComics.fulfilled, (state, action) => {
       state.isLoading = false;
       state.comics = action.payload;
     });
