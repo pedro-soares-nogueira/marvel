@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Container } from "../../../styles/globals";
 import { Button } from "../Hero/index.styles";
-import bgImage from "../../assets/bg_contact_image.jpg";
+import bgImage from "../../../assets/bg_contact_image.jpg";
 
 export const ContactContainer = styled(Container)`
   @media (max-width: ${(props) => props.theme.bp_xlarge}) {
