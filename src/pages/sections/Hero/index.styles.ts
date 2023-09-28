@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { Container } from "../../styles/globals";
+import { Container } from "../../../styles/globals";
 
 export const HeroWrapper = styled.div`
   background-color: ${(props) => props.theme.red300};

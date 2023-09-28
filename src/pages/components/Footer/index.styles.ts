@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Container } from "../../styles/globals";
+import { Container } from "../../../styles/globals";
 
 export const FooterContainer = styled.footer`
   margin-top: 4rem;

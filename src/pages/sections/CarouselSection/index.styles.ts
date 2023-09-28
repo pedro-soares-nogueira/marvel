@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Container } from "../../styles/globals";
+import { Container } from "../../../styles/globals";
 import { Button } from "../Hero/index.styles";
 
 export const SaleComicsContainer = styled(Container)`
